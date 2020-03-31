@@ -81,7 +81,7 @@ Resources:
     Type: AWS::S3::Bucket
     Properties:
       BucketName: !If [ NoSubdomain, !Ref 'HostedZone',
-        !Join ['', [!Ref 'SubdomainName', ., !Ref 'HostedZone']] ],
+        !Join ['', [!Ref 'SubdomainName', ., !Ref 'HostedZone']] ]
       AccessControl: PublicRead
       WebsiteConfiguration:
         IndexDocument: index.html
@@ -90,7 +90,7 @@ Resources:
     Type: AWS::S3::BucketPolicy
     Properties:
       Bucket: !If [ NoSubdomain, !Ref 'HostedZone',
-        !Join ['', [!Ref 'SubdomainName', ., !Ref 'HostedZone']] ],
+        !Join ['', [!Ref 'SubdomainName', ., !Ref 'HostedZone']] ]
       PolicyDocument:
         Version: '2012-10-17'
         Statement:
@@ -130,7 +130,7 @@ Resources:
       HostedZoneName: !Join ['', [!Ref 'HostedZone', .]]
       Comment: CNAME redirect custom name to CloudFront distribution
       Name: !If [ NoSubdomain, !Ref 'HostedZone',
-        !Join ['', [!Ref 'SubdomainName', ., !Ref 'HostedZone']] ],
+        !Join ['', [!Ref 'SubdomainName', ., !Ref 'HostedZone']] ]
       Type: A
       AliasTarget:
         HostedZoneId: !FindInMap [Region2S3Info, !Ref 'AWS::Region', HostedZoneID]
@@ -138,7 +138,7 @@ Resources:
 Outputs:
   WebsiteURL:
     Value: !If [ NoSubdomain, !Ref 'HostedZone',
-        !Join ['', [!Ref 'SubdomainName', ., !Ref 'HostedZone']] ],
+        !Join ['', [!Ref 'SubdomainName', ., !Ref 'HostedZone']] ]
     Description: The URL of the website
   BucketName:
     Value: !Ref 'S3BucketForWebsiteContent'
