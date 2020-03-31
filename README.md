@@ -14,5 +14,5 @@ Create a simple, low-cost static website hosted on S3 to be used with WP2Static 
 * DNS record in the HostedZone.
 ### Outputs
 ### Launcher
-[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=build-s3-website-for-wp2static&templateURL=https://raw.githubusercontent.com/joylogics/cloudformation/master/src/S3_Website_for_WP2Static.yaml)
+[![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=build-s3-website-for-wp2static&templateURL=https://jl-cloudformation.s3.us-east-1.amazonaws.com/S3_Website_for_WP2Static.yaml)
 
