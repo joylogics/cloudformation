@@ -21,8 +21,8 @@ Create a simple, low-cost static website hosted on S3 to be used with WP2Static 
 * S3UserSecretAccessKey: Secret Access Key for the IAM User
 
 ## WordPress_Single_Instance.yaml
-From [awslabs cloudformation templates repo](https://github.com/awslabs/aws-cloudformation-templates). 
-This [version](https://github.com/awslabs/aws-cloudformation-templates/blob/e5362c99375ca49d4da56973c95dda81742667e0/aws/solutions/WordPress_Single_Instance.yaml) was copied.
+This [version](https://github.com/awslabs/aws-cloudformation-templates/blob/e5362c99375ca49d4da56973c95dda81742667e0/aws/solutions/WordPress_Single_Instance.yaml) was copied from [awslabs cloudformation templates repo](https://github.com/awslabs/aws-cloudformation-templates). 
+
 [![Launch Stack](https://cdn.rawgit.com/buildkite/cloudformation-launch-stack-button-svg/master/launch-stack.svg)](https://console.aws.amazon.com/cloudformation/home#/stacks/new?stackName=build-s3-website-for-wp2static&templateURL=https://jl-cloudformation.s3.us-east-1.amazonaws.com/WordPress_Single_Instance.yaml)
 ### Usecase
 Create an EC2 instance with WordPress installed on it.
